@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XzC-5a-QVl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="DlQ-Qy-uie">
+            <objects>
+                <navigationController id="XzC-5a-QVl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p2h-Yy-TvH">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MOL-jd-MYo" kind="relationship" relationship="rootViewController" id="zLZ-Dm-OBS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5n-JZ-hru" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-365" y="164"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="Fv1-2S-HJf">
+            <objects>
+                <viewController id="EQ5-aw-bbI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hut-qR-f22">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="xww-QW-85P"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="smu-ge-Stj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OhE-I5-PS6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="852"/>
+        </scene>
+        <!--settings-->
+        <scene sceneID="bJl-T5-3nY">
+            <objects>
+                <viewController title="settings" id="MOL-jd-MYo" customClass="SettingsViewController" customModule="Calendar_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="wNv-V4-0CW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <inset key="scrollIndicatorInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tagCell" id="Tkr-OT-SQ0" customClass="TagCell" customModule="Calendar_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tkr-OT-SQ0" id="kvD-Rc-2MC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ugf-Hp-pod">
+                                            <rect key="frame" x="20" y="11" width="335" height="22"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1N-G4-e3n">
+                                                    <rect key="frame" x="0.0" y="0.0" width="278" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zaJ-sd-iY2">
+                                                    <rect key="frame" x="286" y="0.0" width="51" height="22"/>
+                                                </switch>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ugf-Hp-pod" firstAttribute="leading" secondItem="kvD-Rc-2MC" secondAttribute="leading" constant="20" symbolic="YES" id="2dL-fQ-CEE"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="Ugf-Hp-pod" secondAttribute="bottom" id="G5T-xm-R3N"/>
+                                        <constraint firstItem="Ugf-Hp-pod" firstAttribute="top" secondItem="kvD-Rc-2MC" secondAttribute="topMargin" id="Rv9-B5-GSa"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ugf-Hp-pod" secondAttribute="trailing" constant="20" symbolic="YES" id="vZr-Pe-KLE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="showTag" destination="zaJ-sd-iY2" id="6X0-dE-70G"/>
+                                    <outlet property="tagName" destination="T1N-G4-e3n" id="BBD-ZW-GZ3"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="MOL-jd-MYo" id="W8p-Il-gy9"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="CIP-P1-xXp">
+                        <barButtonItem key="rightBarButtonItem" title="Add Tag" id="J8w-Jm-ZLT"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="view" destination="wNv-V4-0CW" id="3tp-pN-tfX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3W-qA-dBS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693.60000000000002" y="161.46926536731635"/>
+        </scene>
+    </scenes>
+</document>
